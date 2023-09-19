@@ -1,6 +1,10 @@
-body {
-  background: #112946;
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
 }
+
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato-Regular.woff2") format("woff2"),
@@ -24,6 +28,11 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  background: #112946;
+}
+
 .banner-button-black {
   background: transparent;
   color: #000;
@@ -282,23 +291,41 @@ body {
 .carousel_section {
   background: url(../images/Ancient_bg.PNG) no-repeat center center;
   background-size: cover;
-  padding: 18rem 0;
+  background-position: center center;
+  object-fit: cover;
+  min-height: 75vh;
 }
 .carousel_items {
   text-align: right;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-end;
+  position: relative;
 }
 .carousel_item_content {
   color: #fff;
-  margin-left: 23rem;
+  width: 56%;
+  padding-right: 20px;
   text-align: right;
-  padding: 0rem 4rem;
 }
+
+@media (max-width: 992px) {
+  .carousel_item_content {
+    width: 90%;
+    text-align: center;
+  }
+}
+
 .carousel_item_content h1 {
-  margin-left: 8rem;
+  margin-bottom: 20px;
+  line-height: 2rem;
 }
 .carousel_item_content p {
-  margin-left: 14rem;
   font-size: 28px;
+  line-height: 2rem;
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -309,7 +336,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6%;
+  width: 60px;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -321,9 +348,9 @@ body {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  background-color: #090909;
+  width: 50px;
+  height: 50px;
+  background-color: #7e7d7d;
   border-radius: 50%;
 }
 .carousel-indicators {
