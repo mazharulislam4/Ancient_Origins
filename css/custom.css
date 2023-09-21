@@ -1171,6 +1171,7 @@ body {
 }
 .package:nth-child(3) {
   background-image: url("../images/package_bg_3.png");
+  z-index: 1;
 }
 @media (max-width: 1200px) {
   .packages .package {
