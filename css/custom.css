@@ -861,6 +861,11 @@ body {
   min-height: 75vh;
   width: 100%;
 }
+
+.carousel_section .visually-hidden {
+  display: none;
+}
+
 .carousel-item {
   background: url(../images/Ancient_bg.PNG);
   background-position: center center;
@@ -917,7 +922,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
+  width: 60px !important;
   padding: 0;
   color: #fff;
   text-align: center;
